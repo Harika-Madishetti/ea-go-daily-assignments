@@ -66,3 +66,31 @@ func TestSuccessfulMultiplicationOfTwoIntegers(t *testing.T) {
 		t.Error("Multiplication Failed")
 	}
 }
+
+func TestSucessfulDivisionOfTwoNumbers(t *testing.T) {
+	result, _ := Divide(10, 2)
+	if result != 5 {
+		t.Error("Division Failed")
+	}
+}
+
+func TestSucessfulDivisionOfTwoNegativeNumbers(t *testing.T) {
+	result, _ := Divide(-10, -5)
+	if result != 2 {
+		t.Error("Division Failed")
+	}
+}
+
+func TestSucessfulDivisionOfTwoIntegers(t *testing.T) {
+	result, _ := Divide(-10, 5)
+	if result != -2 {
+		t.Error("Division Failed")
+	}
+}
+
+func TestDoesNotAllowDivisionByZero(t *testing.T) {
+	_, error := Divide(10, 0)
+	if error != errorDivisionByZero {
+		t.Error("Divison By Zero is allowed")
+	}
+}
