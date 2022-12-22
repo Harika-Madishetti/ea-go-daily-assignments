@@ -45,3 +45,24 @@ func TestSuccessfulSubtractionOfTwoIntegers(t *testing.T) {
 		t.Error("Subtraction Failed")
 	}
 }
+
+func TestSuccessfulMultiplicationOfTwoNumbers(t *testing.T) {
+	result := Multiply(10, 30)
+	if result != 300 {
+		t.Error("Multiplication Failed")
+	}
+}
+
+func TestSuccessfulMultiplicationOfTwoNegativeNumbers(t *testing.T) {
+	result := Multiply(-10, -30)
+	if result != 300 {
+		t.Error("Multiplication Failed")
+	}
+}
+
+func TestSuccessfulMultiplicationOfTwoIntegers(t *testing.T) {
+	result := Multiply(-10, 30)
+	if result != -300 {
+		t.Error("Multiplication Failed")
+	}
+}
