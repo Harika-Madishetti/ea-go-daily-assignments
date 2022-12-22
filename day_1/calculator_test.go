@@ -24,3 +24,24 @@ func TestSuccessfulAdditionOfTwoIntegers(t *testing.T) {
 		t.Error("Addition Failed")
 	}
 }
+
+func TestSuccessfulSubtractionOfTwoNumbers(t *testing.T) {
+	result := subtrat(10, 5)
+	if result != 5 {
+		t.Error("Subtraction Failed")
+	}
+}
+
+func TestSuccessfulSubtractionOfTwoNegativeNumbers(t *testing.T) {
+	result := subtrat(-10, -5)
+	if result != -5 {
+		t.Error("Subtraction Failed")
+	}
+}
+
+func TestSuccessfulSubtractionOfTwoIntegers(t *testing.T) {
+	result := subtrat(-10, 5)
+	if result != -15 {
+		t.Error("Subtraction Failed")
+	}
+}
