@@ -29,3 +29,7 @@ func Divide(x float64, y float64) (float64, error) {
 func SinFunction(x float64) float64 {
 	return math.Sin(x)
 }
+
+func CosFunction(x float64) float64 {
+	return math.Cos(x)
+}

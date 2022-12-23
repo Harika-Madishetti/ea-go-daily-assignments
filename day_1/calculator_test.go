@@ -95,10 +95,25 @@ func TestDoesNotAllowDivisionByZero(t *testing.T) {
 	}
 }
 
-func TestValueofSinFunctions(t *testing.T) {
+func TestValuOfSinFunctions(t *testing.T) {
 	result := SinFunction(0)
 	println(result)
 	if result != 0 {
 		t.Error("SinFunction failed")
+	}
+}
+
+func TestValueOfCosFunctions(t *testing.T) {
+	result := CosFunction(0)
+	if result != 1 {
+		t.Error("CosFunction Failed")
+	}
+}
+
+func TestValueOfCosFunction(t *testing.T) {
+	result := CosFunction(1)
+	println(result)
+	if result != 5 {
+		t.Error("CosFunction Failed")
 	}
 }
