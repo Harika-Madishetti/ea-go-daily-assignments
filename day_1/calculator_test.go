@@ -94,3 +94,11 @@ func TestDoesNotAllowDivisionByZero(t *testing.T) {
 		t.Error("Divison By Zero is allowed")
 	}
 }
+
+func TestValueofSinFunctions(t *testing.T) {
+	result := SinFunction(0)
+	println(result)
+	if result != 0 {
+		t.Error("SinFunction failed")
+	}
+}

@@ -1,6 +1,9 @@
 package calculator
 
-import "errors"
+import (
+	"errors"
+	"math"
+)
 
 var errorDivisionByZero = errors.New("Divided By Zero")
 
@@ -21,4 +24,8 @@ func Divide(x float64, y float64) (float64, error) {
 		return 0, errorDivisionByZero
 	}
 	return x / y, nil
+}
+
+func SinFunction(x float64) float64 {
+	return math.Sin(x)
 }
